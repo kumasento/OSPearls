@@ -8,12 +8,13 @@
 struct SemRecord;
 typedef struct SemRecord * Semaphore;
 
-Semaphore Sem_Create( int initCount, int MaxBlkThread );
+Semaphore Sem_Create( int initCount, int MaxBlkThread, char* name );
 void P(Semaphore sem);
 void V(Semaphore sem);
 
 struct SemRecord {
     int count;
+    char *name;
     pthread_mutex_t* m; // -- used to create block
     SemQueue q;
 };
