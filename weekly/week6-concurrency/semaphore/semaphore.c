@@ -30,7 +30,7 @@ void P(Semaphore sem) {
     //printf("-- P[%s]: START\n", sem->name);
     //printf("-- P[%s]: count: %d\n", sem->name, sem->count);
     sem->count --;
-    if (sem->count <= 0) {
+    if (sem->count < 0) {
         pthread_mutex_unlock(&lock);
 
         // -- inqueue, and lock

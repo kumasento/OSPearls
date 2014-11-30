@@ -5,6 +5,10 @@
 
 #include "semaphore_queue.h"
 
+#define MAX_BUF_SIZE    1000
+#define MAX_BLK_THREADS 1000
+#define MAX_LOOP_TIME   10
+
 struct SemRecord;
 typedef struct SemRecord * Semaphore;
 

@@ -5,10 +5,6 @@
 
 #include "semaphore.h"
 
-#define MAX_BUF_SIZE    100
-#define MAX_BLK_THREADS 1000
-#define MAX_LOOP_TIME   1000
-
 // -- without mutex
 int produce();
 void consume(int item);
